@@ -9,7 +9,8 @@ $(function() {
     var registry_path = collection_registry_uri.directory()
     var registry_number = registry_path.substr(registry_path.lastIndexOf('/') + 1)
     var registry_info_link = $('<a class="CR_pop">CR'+ registry_number + '</a>');
-    registry_info_link.on('mouseenter', ajax_popover);
+    // registry_info_link.on('mouseenter', ajax_popover);
+    registry_info_link.on('click', ajax_popover);
     $(this).append(registry_info_link);
   }
   function ajax_popover() {
@@ -21,7 +22,8 @@ $(function() {
       dataType : "jsonp",
       url : collection_registry_uri,
       success: function(data){
-        el.unbind('mouseenter');
+        // el.unbind('mouseenter');
+        el.unbind('click');
         el.popover(popover_template(data)).popover('show');
       }
     });
@@ -34,7 +36,7 @@ $(function() {
     return {
       title: title,
       content: data['name'],
-      trigger: "hover",
+      // trigger: "hover",
       placement: "auto" 
     };
   }
