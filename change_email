@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-set -x
-set -eu
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # http://stackoverflow.com/questions/59895
-cp $DIR/build/index.html $DIR/build/index.html.orig
-# sed '/regex/' <file> | diff -p <file> /dev/stdin | patch  # http://stackoverflow.com/a/20961696/1763984
-sed "s/help@example.edu/$*/g" $DIR/build/index.html | diff -p $DIR/build/index.html /dev/stdin | patch $DIR/build/index.html
