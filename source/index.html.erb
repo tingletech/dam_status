@@ -3,33 +3,38 @@ title: "Collection Status Page: DAM"
 ---
 
 <div class="container">
-  <div class="row">
+  <div class="row head">
     <h1><%= data.page.title %></h1>
     <div>last updated: <%= File.mtime(current_page.source_file).strftime("%Y-%m-%d %l:%M %P") %></div>
   </div>
-  <div class="row">
+  <div class="row section">
     <h2>files and metadata imported on production</h2>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/32/">
-      Nuxeo: <a href="https://nuxeo.cdlib.org/nuxeo/nxdoc/default/d82e9ab7-35a0-4f0b-b65b-2d4588467c49/view_documents">asset-library/UCI/Rorty</a>
+      Nuxeo: 
+      <a href="https://nuxeo.cdlib.org/nuxeo/nxdoc/default/d82e9ab7-35a0-4f0b-b65b-2d4588467c49/view_documents">asset-library/UCI/Rorty</a>
+      ✎
     </div>
   </div>
-  <div class="row">
+  <div class="row section">
     <h2>files imported on production</h2>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/19/">
-      Nuxeo: <a href="https://nuxeo.cdlib.org/nuxeo/nxdoc/default/399637a4-24af-4c4a-9298-bca82ce69050/view_documents">asset-library/UCI/Cochems</a>
+      Nuxeo: 
+      <a href="https://nuxeo.cdlib.org/nuxeo/nxdoc/default/399637a4-24af-4c4a-9298-bca82ce69050/view_documents">asset-library/UCI/Cochems</a>
+      ✎
     </div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/2/">
-      Nuxeo: <a href="https://nuxeo.cdlib.org/nuxeo/nxdoc/default/52ed1025-c812-4138-b181-b256339949db/view_documents">asset-library/UCD/Halberstadt</a>
+      Nuxeo: 
+      <a href="https://nuxeo.cdlib.org/nuxeo/nxdoc/default/52ed1025-c812-4138-b181-b256339949db/view_documents">asset-library/UCD/Halberstadt</a>
     </div>
   </div>
-  <div class="row">
+  <div class="row section">
     <h2>files imported on stage</h2>
     <div><code>nuxeo-stg:/apps/content/new_path</code></div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/21/">
       UCI/Gearhardt
     </div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/20/">
-      UCI/McMillan
+      UCI/McMillan ✎
     </div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/194/" class="desired">
       UCI/UCIHistory/Photographs/EarlyCampusPhotoAlbums
@@ -42,13 +47,13 @@ title: "Collection Status Page: DAM"
       UCI/UCIHistory/Publications
     </div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/79/">
-      "UCR/sabino osuna papers"
+      "UCR/sabino osuna papers" ✎
     </div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/80/">
       "UCR/tuskegee airmen archive"
     </div>
   </div>
-  <div class="row">
+  <div class="row section">
     <h2>files on disk (copied to stage)</h2>
     <div><code>nuxeo-stg:/apps/content/raw_files</code></div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/5/">
@@ -82,7 +87,7 @@ title: "Collection Status Page: DAM"
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/82/">
       UCR/highlander student newspaper"</div>
   </div>
-  <div class="row">
+  <div class="row section">
     <h2>need to copy files from hard drive to stage</h2>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/104/">
       Cholera_pamphlets
@@ -100,12 +105,16 @@ title: "Collection Status Page: DAM"
       Homeopathy_pamphlets
     </div>
   </div>
-  <div class="row">
+  <div class="row section">
     <h2>need files</h2>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/66/"></div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/132/"></div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/127/"></div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/108/"></div>
     <div data-ucldc-collection="https://registry.cdlib.org/api/v1/collection/189/"></div>
+  </div>
+  <div class="row key">
+    <div>✎ = metadata processed</div>
+    <div class="desired">desired</div>
   </div>
 </div>
