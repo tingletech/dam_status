@@ -8,10 +8,12 @@ $(function() {
     var collection_registry_uri=URI($(this).data('ucldc-collection'));
     var registry_path = collection_registry_uri.directory()
     var registry_number = registry_path.substr(registry_path.lastIndexOf('/') + 1)
-    var registry_info_link = $('<a class="CR_pop">CR'+ registry_number + '</a>');
-    // registry_info_link.on('mouseenter', ajax_popover);
-    registry_info_link.on('click', ajax_popover);
-    $(this).append(registry_info_link);
+    if (registry_number) {
+      var registry_info_link = $('<a class="CR_pop">CR'+ registry_number + '</a>');
+      // registry_info_link.on('mouseenter', ajax_popover);
+      registry_info_link.on('click', ajax_popover);
+      $(this).append(registry_info_link);
+    } 
   }
   function ajax_popover() {
     var el = $(this);
